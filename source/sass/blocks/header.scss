@@ -1,0 +1,254 @@
+.header {
+  padding: 40px 80px;
+}
+
+.header__wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header__logo {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.header__user-menu {
+  @include clear-list;
+  @include flex(flex-end);
+}
+
+.header__user-menu a {
+  @include clear-link;
+  @include font-size(14px, 21px, 500);
+  margin-left: 35px;
+}
+
+.header__user-cart svg {
+  display: none;
+}
+
+.header__navigation-buton {
+  display: none;
+}
+
+.header__navigation {
+  position: relative;
+  margin-top: 100px;
+}
+
+.header__menu {
+  @include clear-list;
+  @include flex(center);
+}
+
+.header__menu a {
+  @include clear-link;
+  @include font-size(16px, 24px, 500);
+  margin-left: 35px;
+}
+
+.header__menu-mobile {
+  display: none;
+}
+
+.header__login-mobile {
+  display: none;
+}
+
+.header__search {
+  position: absolute;
+  left: 0;
+  top: -100px;
+
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.header__search-input {
+  border: none;
+
+  &::placeholder {
+    @include font-size(14px, 21px, 500);
+    color: $grey;
+  }
+}
+
+.header__search-submit {
+  margin-right: 15px;
+  background-color: transparent;
+  border: none;
+}
+
+@media (max-width: $desktop-width) {
+  .header {
+    padding: unset;
+    padding-top: 25px;
+  }
+
+  .header__user-cart svg {
+    fill: transparent;
+    stroke: black;
+  }
+
+  .header__navigation-buton svg {
+    stroke: black;
+  }
+
+  .header.header--menu-opened {
+    background-color: $brown;
+  }
+
+  .header.header--menu-opened svg {
+    fill: transparent;
+    stroke: $white;
+  }
+
+  .header__wrapper {
+    @include flex(space-between, flex-start);
+    flex-direction: row-reverse;
+  }
+
+  .header__user-login {
+    display: none;
+  }
+
+  .header__user-cart {
+    position: relative;
+  }
+
+  .header__user-cart span {
+    display: none;
+  }
+
+  .header__user-cart svg {
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .header__navigation {
+    margin-top: unset;
+  }
+
+  .header__navigation-wrap {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    margin: unset;
+    margin-top: -3px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    z-index: -1;
+  }
+
+  .header__menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__menu li {
+    margin-bottom: 20px;
+  }
+
+  .header__menu a {
+    @include font-size(24px, 36px, 500);
+    margin-left: unset;
+  }
+
+  .header__menu-mobile {
+    @include clear-list;
+    display: block;
+    margin-top: 20px;
+  }
+
+  .header__menu-mobile li {
+    margin-bottom: 15px;
+  }
+
+  .header__login-mobile {
+    @include clear-link;
+    display: block;
+    margin-top: 30px;
+  }
+
+  .header__menu-mobile a {
+    @include clear-link;
+    @include font-size(18px, 130%, 500);
+    opacity: 0.75;
+  }
+
+  .header__search {
+    display: block;
+
+    position: relative;
+    left: unset;
+    top: unset;
+    order: -1;
+    z-index: 2;
+
+    margin: 30px 0;
+  }
+
+  .header__search-input {
+    opacity: 0.15;
+    width: 88%;
+    height: 40px;
+    border-radius: 21px;
+
+    padding-left: 30px;
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  .header__search-submit {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+  }
+
+  .header__search-submit svg {
+    fill: white;
+  }
+
+  .header__navigation-buton {
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+
+
+  .header__navigation--js .header__navigation-wrap {
+    display: none;
+  }
+
+  .header__navigation--menu-opened {
+    position: absolute;
+    width: 100vw;
+    z-index: 1;
+  }
+
+  .header__navigation--menu-opened .header__navigation-wrap {
+    display: flex;
+
+    width: 100%;
+    background-color: $brown;
+    padding-left: 30px;
+  }
+
+  .header__navigation--menu-opened a {
+    color: $white;
+  }
+}

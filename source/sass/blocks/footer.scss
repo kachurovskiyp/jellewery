@@ -1,0 +1,137 @@
+.footer {
+  background-color: black;
+  color: $white;
+}
+
+.footer a {
+  @include clear-link;
+  @include font-size(16px, 130%, 500);
+}
+
+.footer ul {
+  @include clear-list;
+}
+
+.footer__inner {
+  @include flex(space-between, flex-start);
+
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 100px 5%;
+}
+
+.footer__title {
+  @include cormorant-font(34px, 130%);
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.footer__description {
+  line-height: 130%;
+  color: $grey;
+  margin-top: 10px;
+}
+
+.footer__subscribe {
+  position: relative;
+}
+
+.footer__subscribe input {
+  width: 100%;
+  padding: 10px 0;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $white;
+
+  &::placeholder {
+    @include font-size(14px, 21px, 500);
+    color: $grey;
+  }
+}
+
+.footer__subscribe button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-color: transparent;
+  border: none;
+  color: $white;
+}
+
+.footer__subscribe svg {
+  stroke: white;
+}
+
+.footer__wrapper {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.footer__navigation {
+  @include flex;
+}
+
+.footer__navigation li {
+  margin-bottom: 30px;
+
+  &:last-of-type {
+    margin-bottom: unset;
+  }
+}
+
+.footer__navigation ul {
+  margin-right: 80px;
+}
+
+.footer__social li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.footer__social svg {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.footer__social li:first-of-type svg {
+  left: 5px;
+}
+
+@media (max-width: $desktop-width) {
+  .footer__inner {
+    display: block;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .footer__navigation {
+    display: block;
+  }
+
+  .footer__navigation ul {
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  .footer__social li {
+    padding: 0;
+    margin-right: 20px;
+    margin-bottom: unset;
+  }
+
+  .footer__social {
+    @include flex(flex-start);
+  }
+
+  .footer__social svg {
+    position: static;
+  }
+
+  .footer__social span {
+    display: none;
+  }
+}

@@ -4,22 +4,29 @@
   padding: 0;
 }
 
-@mixin font-size($size, $line) {
+@mixin clear-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin font-size($size, $line, $font-weight: 400) {
+  font-size: $size;
+  line-height: $line;
+  font-weight: $font-weight;
+}
+
+@mixin flex($justify-content: space-between, $align-items: center) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin cormorant-font($size, $line, $font-weight: 600, $style: normal) {
+  font-family: "Cormorant", "Times New Roman", serif;
+  font-style: $style;
+  font-weight: $font-weight;
   font-size: $size;
   line-height: $line;
 }
 
-@mixin monserat-font($size, $line) {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-style: normal;
-  font-size: $size;
-  line-height: $line;
-}
-
-@mixin raleway-font($size, $line) {
-  font-family: "Raleway", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: $size;
-  line-height: $line;
-}
