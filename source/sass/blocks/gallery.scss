@@ -1,0 +1,35 @@
+.gallery {
+  text-align: center;
+}
+
+.galley__title {
+  @include cormorant-font(34px, 130%);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.gallery__description a {
+  @include clear-link;
+  @include font-size(16px, 130%, 500);
+  display: inline-block;
+  border-bottom: 1px solid $brown;
+}
+
+.gallery__wrapper {
+  @include wrapper;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery__horizontal-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin-right: 30px;
+}
+
+.gallery__image--big {
+  margin-right: 30px;
+}

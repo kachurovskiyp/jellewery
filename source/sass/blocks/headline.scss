@@ -1,0 +1,42 @@
+.headline {
+  width: 100%;
+  position: relative;
+}
+
+.headline__image {
+  width: 100%;
+  height: auto;
+}
+
+.headline__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.headline__title {
+  @include cormorant-font(45px, 130%);
+  letter-spacing: 0.03em;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.headline__description {
+  @include cormorant-font(38px, 130%, 400, italic);
+  color: $white;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: $tablet-width) {
+  .headline__title {
+    font-size: 38px;
+  }
+
+  .headline__description {
+    font-size: 34px;
+  }
+}

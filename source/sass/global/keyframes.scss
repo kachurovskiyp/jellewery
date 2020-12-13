@@ -1,0 +1,13 @@
+@keyframes rotate-down {
+  0% { transform: rotate(180deg); }
+  25% { transform: rotate(160deg); }
+  45% { transform: rotate(200deg); }
+  100% { transform: rotate(0); }
+}
+
+@keyframes rotate-up {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(20deg); }
+  45% { transform: rotate(-20deg); }
+  100% { transform: rotate(180deg); }
+}

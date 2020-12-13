@@ -6,8 +6,15 @@
 @import "global/mixins.scss";
 @import "global/fonts.scss";
 @import "global/global-style.scss";
+@import "global/swiper.scss";
+@import "global/keyframes.scss";
 
 /* blocks */
 
 @import "blocks/header.scss";
+@import "blocks/headline.scss";
+@import "blocks/noveltys.scss";
+@import "blocks/blog.scss";
+@import "blocks/questions.scss";
+@import "blocks/gallery.scss";
 @import "blocks/footer.scss";

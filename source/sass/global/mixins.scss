@@ -9,6 +9,11 @@
   color: inherit;
 }
 
+@mixin wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
 @mixin font-size($size, $line, $font-weight: 400) {
   font-size: $size;
   line-height: $line;
